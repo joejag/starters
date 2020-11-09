@@ -1,8 +1,10 @@
 #!/usr/bin/env node
-import React from "react";
-import { render } from "ink";
-import meow from "meow";
-import App from "./ui";
+/* eslint-disable no-tabs */
+
+import React from 'react'
+import { render } from 'ink'
+import meow from 'meow'
+import App from './ui'
 
 const cli = meow(
   `
@@ -19,10 +21,10 @@ const cli = meow(
   {
     flags: {
       name: {
-        type: "string",
-      },
-    },
+        type: 'string'
+      }
+    }
   }
-);
+)
 
-render(<App name={cli.flags.name} />);
+render(<App name={cli.flags.name} />)

@@ -1,52 +1,44 @@
 {
-	"name": "starters",
-	"version": "0.0.0",
-	"license": "MIT",
-	"bin": "dist/cli.js",
-	"engines": {
-		"node": ">=10"
-	},
-	"scripts": {
-		"build": "tsc",
-		"start": "npm run build && dist/cli.js",
-		"pretest": "npm run build",
-		"test": "xo && ava"
-	},
-	"files": [
-		"dist/cli.js"
-	],
-	"dependencies": {
-		"ink": "^3.0.8",
-		"meow": "^8.0.0",
-		"react": "^17.0.1"
-	},
-	"devDependencies": {
-		"@ava/typescript": "^1.1.1",
-		"@sindresorhus/tsconfig": "^0.7.0",
-		"@types/react": "^16.9.56",
-		"ava": "^3.13.0",
-		"chalk": "^4.1.0",
-		"eslint-config-xo-react": "^0.23.0",
-		"eslint-plugin-react": "^7.21.5",
-		"eslint-plugin-react-hooks": "^4.2.0",
-		"ink-testing-library": "^2.1.0",
-		"typescript": "^4.0.5",
-		"xo": "^0.34.2"
-	},
-	"ava": {
-		"typescript": {
-			"extensions": [
-				"tsx"
-			],
-			"rewritePaths": {
-				"source/": "dist/"
-			}
-		}
-	},
-	"xo": {
-		"extends": "xo-react",
-		"rules": {
-			"react/prop-types": "off"
-		}
-	}
+  "name": "starters",
+  "version": "0.0.0",
+  "license": "MIT",
+  "bin": "dist/cli.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/cli.js --name Joe",
+    "test": "jest"
+  },
+  "files": [
+    "dist/cli.js"
+  ],
+  "dependencies": {
+    "ink": "^3.0.8",
+    "meow": "^8.0.0",
+    "react": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@types/react": "^16.9.56",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "babel-eslint": "^10.1.0",
+    "chalk": "^4.1.0",
+    "eslint": "^7.13.0",
+    "eslint-config-standard": "^16.0.1",
+    "eslint-config-standard-jsx": "^10.0.0",
+    "eslint-config-standard-react": "^11.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-standard": "^4.0.2",
+    "ink-testing-library": "^2.1.0",
+    "jest": "^26.6.3",
+    "typescript": "^4.0.5"
+  }
 }
