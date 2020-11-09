@@ -10,7 +10,8 @@
   "scripts": {
     "build": "tsc",
     "start": "npm run build && node dist/cli.js --name Joe",
-    "test": "jest --watch source/*"
+    "test": "jest source/*",
+    "test:watch": "jest --watch source/*"
   },
   "files": [
     "dist/cli.js"
