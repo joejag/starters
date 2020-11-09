@@ -7,5 +7,4 @@ const App: FC<{name?: string}> = ({ name = 'Stranger' }) => (
   </Text>
 )
 
-module.exports = App
 export default App
