@@ -2,6 +2,7 @@
   "name": "starters",
   "version": "0.0.1",
   "license": "MIT",
+  "author": "Joe Wright <joe@joejag.com> (https://github.com/joejag/starters)",
   "bin": "dist/cli.js",
   "engines": {
     "node": ">=10"
