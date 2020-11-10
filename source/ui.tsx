@@ -1,6 +1,10 @@
 import React, { FC, useState, useEffect } from 'react'
-import { Text } from 'ink'
+import { Box, Text } from 'ink'
 import fs from 'fs-extra'
+
+const Logo: FC<{}> = () => (
+  <Text color='white' backgroundColor='blue'> STARTERS </Text>
+)
 
 const App: FC<{language?: string}> = ({ language = 'node' }) => {
   const [status, setStatus] = useState({ done: false, error: null })
@@ -20,12 +24,13 @@ const App: FC<{language?: string}> = ({ language = 'node' }) => {
   }, [source, language])
 
   return (
-    <>
+    <Box>
+      <Logo /><Text>&nbsp;</Text>
       {!status.done && !status.error && <Text>Copying <Text color='yellow'>{language}</Text> project</Text>}
       {status.error && <Text>Something went wrong copying to <Text color='red'>{destination}</Text></Text>}
       {status.done &&
-        <Text>Copied <Text color='yellow'>{language}</Text> to <Text color='green'>{destination}</Text></Text>}
-    </>
+        <Text>Copied new <Text color='yellow'>{language}</Text> project to <Text color='green'>{destination}</Text></Text>}
+    </Box>
   )
 }
 
