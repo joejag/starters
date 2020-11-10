@@ -1,4 +1,4 @@
-package java.gradle;
+package starters;
 
 public class Library {
     public boolean someLibraryMethod() {
