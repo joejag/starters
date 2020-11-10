@@ -2,12 +2,44 @@ import React, { FC, useState, useEffect } from 'react'
 import { Box, Text } from 'ink'
 import fs from 'fs-extra'
 
+const KNOWN_LANGUAGES = [
+  'cplusplus',
+  'csharp',
+  'go',
+  'haskell',
+  'java',
+  'java-mvn',
+  'node',
+  'python',
+  'react-rtl',
+  'ruby',
+  'scala'
+]
+
 const Logo: FC<{}> = () => (
   <Text color='white' backgroundColor='blue'> STARTERS </Text>
 )
 
-const App: FC<{language?: string}> = ({ language = 'node' }) => {
+const App: FC<{language?: string}> = ({ language }) => {
   const [status, setStatus] = useState({ done: false, error: null })
+
+  if (KNOWN_LANGUAGES.indexOf(language) === -1) {
+    return (
+      <>
+        <Box>
+          <Logo />
+          <Text> Sorry, <Text color='red'>{language}</Text> is not supported.</Text>
+        </Box>
+        <Box flexDirection='column'>
+          <Text>&nbsp;</Text>
+          <Text>You can choose from:</Text>
+          {KNOWN_LANGUAGES.map((l) =>
+            <Text key={l}> * {l}</Text>
+          )}
+        </Box>
+      </>
+    )
+  }
 
   const source = `available/${language}`
   const destination = `${process.cwd()}/${language}_project`
