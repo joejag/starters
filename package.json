@@ -18,6 +18,7 @@
     "/dist"
   ],
   "dependencies": {
+    "fs-extra": "^9.0.1",
     "ink": "^3.0.8",
     "meow": "^8.0.0",
     "react": "^17.0.1"

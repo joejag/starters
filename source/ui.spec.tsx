@@ -10,7 +10,7 @@ test('greet unknown user', () => {
 })
 
 test('greet user with a name', () => {
-  const { lastFrame } = render(<App name='Jane' />)
+  const { lastFrame } = render(<App language='node' />)
 
   expect(lastFrame()).toBe(chalk`Hello, {green Jane}`)
 })

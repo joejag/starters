@@ -19,4 +19,4 @@ const cli = meow(
   }
 )
 
-render(<App name={cli.input[0]} />)
+render(<App language={cli.input[0]} />)
