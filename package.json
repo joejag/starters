@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "npm run build && node dist/cli.js --name Joe",
+    "start": "npm run build && node dist/cli.js",
     "test": "jest source/*",
     "test:watch": "jest --watch source/*",
     "release": "np --no-2fa"

@@ -9,22 +9,14 @@ import App from './ui'
 const cli = meow(
   `
 	Usage
-	  $ starters
-
-	Options
-		--name  Your name
+	  $ starters <language>
 
 	Examples
-	  $ starters --name=Jane
-	  Hello, Jane
+	  $ starters java
+	  Java project created
 `,
   {
-    flags: {
-      name: {
-        type: 'string'
-      }
-    }
   }
 )
 
-render(<App name={cli.flags.name} />)
+render(<App name={cli.input[0]} />)
