@@ -26,6 +26,3 @@ yarn.lock
 
 *.swp
 *.swo
-
-# Disabling as it causes problems with TCR
-package-lock.json
