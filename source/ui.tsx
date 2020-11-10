@@ -23,6 +23,24 @@ const Logo: FC<{}> = () => (
 const App: FC<{language?: string}> = ({ language }) => {
   const [status, setStatus] = useState({ done: false, error: null })
 
+  if (language === undefined) {
+    return (
+      <>
+        <Box>
+          <Logo />
+          <Text> Please choose a language to create a starter for.</Text>
+        </Box>
+        <Box flexDirection='column'>
+          <Text>&nbsp;</Text>
+          <Text>You can choose from:</Text>
+          {KNOWN_LANGUAGES.map((l) =>
+            <Text key={l}> * {l}</Text>
+          )}
+        </Box>
+      </>
+    )
+  }
+
   if (KNOWN_LANGUAGES.indexOf(language) === -1) {
     return (
       <>
