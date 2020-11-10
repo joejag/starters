@@ -15,7 +15,8 @@
     "release": "np --no-2fa"
   },
   "files": [
-    "/dist"
+    "/dist",
+    "/available"
   ],
   "dependencies": {
     "@types/fs-extra": "^9.0.3",
