@@ -12,9 +12,10 @@ const KNOWN_LANGUAGES = [
   'java-mvn',
   'node',
   'python',
-  'react-rtl',
+  'react',
   'ruby',
-  'scala'
+  'scala',
+  'ts'
 ]
 
 const Logo: FC<{}> = () => (
