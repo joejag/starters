@@ -1,6 +1,7 @@
 import React, { FC, useState, useEffect } from 'react'
 import { Box, Text } from 'ink'
 import fs from 'fs-extra'
+import path from 'path'
 
 const KNOWN_LANGUAGES = [
   'cplusplus',
@@ -59,7 +60,7 @@ const App: FC<{language?: string}> = ({ language }) => {
     )
   }
 
-  const source = `available/${language}`
+  const source = path.resolve(__dirname, '..', 'available', language)
   const destination = `${process.cwd()}/${language}_project`
 
   useEffect(() => {
