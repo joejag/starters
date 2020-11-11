@@ -76,7 +76,7 @@ const App: FC<{language?: string}> = ({ language }) => {
     <>
       {!status.done && !status.error &&
         <Box>
-          <Logo bgColor='blue' /><Text> Copying <Text color='yellow'>{language}</Text> project</Text>
+          <Logo fgColor='black' bgColor='yellow' /><Text> Copying <Text color='yellow'>{language}</Text> project</Text>
         </Box>}
       {status.error &&
         <Box>
