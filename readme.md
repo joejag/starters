@@ -9,7 +9,6 @@ Currently we support:
  * go
  * haskell
  * java
- * java-mvn
  * node
  * python
  * react

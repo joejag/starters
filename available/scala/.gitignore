@@ -35,3 +35,6 @@ build
 
 #general
 *.class
+
+# Ignore Gradle project-specific cache directory
+.gradle

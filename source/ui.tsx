@@ -9,7 +9,6 @@ const KNOWN_LANGUAGES = [
   'go',
   'haskell',
   'java',
-  'java-mvn',
   'node',
   'python',
   'react',
