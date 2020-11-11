@@ -16,5 +16,3 @@ test('print out error on unknown language', () => {
   expect(lastFrame()).toContain(chalk`Sorry, {red unknownthing} is not supported.`)
   expect(lastFrame()).toContain(chalk`java`)
 })
-
-test.todo('can generate a node project')
