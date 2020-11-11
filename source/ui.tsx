@@ -15,8 +15,8 @@ const KNOWN_LANGUAGES = [
   'ts'
 ]
 
-const Logo: FC<{color: string}> = ({ color }) => (
-  <Text color='white' backgroundColor={color}> STARTERS </Text>
+const Logo: FC<{fgColor?: string, bgColor: string}> = ({ fgColor = 'white', bgColor }) => (
+  <Text color={fgColor} backgroundColor={bgColor}> STARTERS </Text>
 )
 
 const App: FC<{language?: string}> = ({ language }) => {
@@ -26,7 +26,7 @@ const App: FC<{language?: string}> = ({ language }) => {
     return (
       <>
         <Box>
-          <Logo color='blue' />
+          <Logo bgColor='blue' />
           <Text> Please choose a language to create a starter for.</Text>
         </Box>
         <Box flexDirection='column'>
@@ -44,7 +44,7 @@ const App: FC<{language?: string}> = ({ language }) => {
     return (
       <>
         <Box>
-          <Logo color='red' />
+          <Logo bgColor='red' />
           <Text> Sorry, <Text color='red'>{language}</Text> is not supported.</Text>
         </Box>
         <Box flexDirection='column'>
@@ -76,15 +76,15 @@ const App: FC<{language?: string}> = ({ language }) => {
     <>
       {!status.done && !status.error &&
         <Box>
-          <Logo color='blue' /><Text> Copying <Text color='yellow'>{language}</Text> project</Text>
+          <Logo bgColor='blue' /><Text> Copying <Text color='yellow'>{language}</Text> project</Text>
         </Box>}
       {status.error &&
         <Box>
-          <Logo color='red' /><Text> Something went wrong copying to <Text color='red'>{destination}</Text></Text>
+          <Logo bgColor='red' /><Text> Something went wrong copying to <Text color='red'>{destination}</Text></Text>
         </Box>}
       {status.done &&
         <Box>
-          <Logo color='green' /><Text> Copied new <Text color='yellow'>{language}</Text> project to <Text color='green'>{destination}</Text></Text>
+          <Logo fgColor='black' bgColor='green' /><Text> Copied new <Text color='yellow'>{language}</Text> project to <Text color='green'>{destination}</Text></Text>
         </Box>}
     </>
   )
