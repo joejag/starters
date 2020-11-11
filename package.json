@@ -1,6 +1,6 @@
 {
   "name": "starters",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "license": "MIT",
   "author": "Joe Wright <joe@joejag.com> (https://github.com/joejag/starters)",
   "bin": "dist/cli.js",
