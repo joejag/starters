@@ -7,11 +7,9 @@ const KNOWN_LANGUAGES = [
   'cplusplus',
   'csharp',
   'go',
-  'haskell',
   'java',
   'node',
   'python',
-  'react',
   'ruby',
   'scala',
   'ts'

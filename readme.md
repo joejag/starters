@@ -7,11 +7,9 @@ Currently we support:
  * cplusplus
  * csharp
  * go
- * haskell
  * java
  * node
  * python
- * react
  * ruby
  * scala
  * ts (typescript)
