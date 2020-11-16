@@ -25,7 +25,7 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testMatch": [
-      "**/*.(test|spec).(ts|tsx)"
+      "**/*.spec.(ts|tsx)"
     ],
     "globals": {
       "ts-jest": {
