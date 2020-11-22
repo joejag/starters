@@ -11,6 +11,7 @@ const KNOWN_LANGUAGES = [
   'node',
   'python',
   'ruby',
+  'rust',
   'scala',
   'ts'
 ]

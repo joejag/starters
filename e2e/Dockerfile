@@ -31,6 +31,10 @@ ENV CSHARP_HOME=/root/.dotnet
 ENV PATH="$CSHARP_HOME:${PATH}"
 RUN dotnet --version
 
+# Rust
+RUN apk add rust cargo
+RUN cargo --version
+
 # Install our tool
 ADD starters.tgz /app
 WORKDIR /app/package

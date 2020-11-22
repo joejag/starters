@@ -4,15 +4,16 @@ A node package that gives you the start of a new project with unit tests in many
 
 Currently we support:
 
- * cplusplus
- * csharp
- * go
- * java
- * node
- * python
- * ruby
- * scala
- * ts (typescript)
+- cplusplus
+- csharp
+- go
+- java
+- node
+- python
+- ruby
+- rust
+- scala
+- ts (typescript)
 
 ## Install
 
@@ -61,3 +62,20 @@ $ starters <language>
     $ starters ts
      Copied new ts project to /tmp/ts_project
 ```
+
+# How to add a new language
+
+We'd appreciate any new language that you can provide. To do this:
+
+- Create a new folder under `available` and add your source tree.
+- Make sure a `runTests.sh` exists in your new folder
+  - Assume the standard tools are already installed for the language
+  - The programme shouldn't watch, it should run and exist cleanly
+  - The user shouldn't have to do anything else to make the script pass
+- Add the language to `KNOWN_LANGUAGES` in `ui.tsx`
+
+And to test it...
+
+- Add the language to `supported` in `endToEndTest.sh`
+- Add any required tooling to the `Dockerfile`. The tests run inside this Docker container
+- Run the `endToEndTest.sh` and make sure it finishes
