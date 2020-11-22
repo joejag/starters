@@ -1,5 +1,7 @@
 # Starters
 
+> Wouldn't it be nice if we didn't have to mess around with tooling to try ideas out?
+
 A node package that gives you the start of a new project with unit tests in many different languages.
 
 Currently we support:
