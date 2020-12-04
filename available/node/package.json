@@ -6,9 +6,7 @@
     "test": "jest"
   },
   "jest": {
-    "testMatch": [
-      "**/*.spec.js"
-    ]
+    "testMatch": ["**/*.spec.js"]
   },
   "babel": {
      "presets": [["@babel/preset-env", {"targets": {"node": "current"}}]]
