@@ -1,12 +1,11 @@
 {
-  "name":"Starters/Library",
-  "description":"Starter PHP project template",
+  "name": "starters/library",
+  "description": "Starter PHP project template",
   "require": {
     "php": "~7.3|~7.4|~8.0"
   },
   "autoload": {
-    "psr-4":
-    {
+    "psr-4": {
       "Starters\\Library\\": "src/"
     }
   },
