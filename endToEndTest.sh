@@ -13,5 +13,5 @@ declare -a supported=( "cplusplus" "csharp" "go" "java" "node" "php" "python" "r
 for i in "${supported[@]}"
 do
    echo "Checking $i"
-   docker run -it starters /bin/bash -c "starters ${i} && ./runTests.sh"
+   docker run -t starters /bin/bash -c "starters ${i} && ./runTests.sh"
 done
