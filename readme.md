@@ -74,7 +74,7 @@ We'd appreciate any new language that you can provide. To do this:
   - Assume the standard tools are already installed for the language
   - The programme shouldn't watch, it should run and exist cleanly
   - The user shouldn't have to do anything else to make the script pass
-- Add the language to `KNOWN_LANGUAGES` in `ui.tsx`
+- Add the language in `supported.tsx`
 
 And to test it...
 

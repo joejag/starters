@@ -6,10 +6,21 @@
     "test": "jest"
   },
   "jest": {
-    "testMatch": ["**/*.spec.js"]
+    "testMatch": [
+      "**/*.spec.js"
+    ]
   },
   "babel": {
-     "presets": [["@babel/preset-env", {"targets": {"node": "current"}}]]
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
