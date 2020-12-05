@@ -1,0 +1,19 @@
+{
+  "name":"Starters/Library",
+  "description":"Starter PHP project template",
+  "require": {
+    "php": "~7.3|~7.4|~8.0"
+  },
+  "autoload": {
+    "psr-4":
+    {
+      "Starters\\Library\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "Starters\\Library\\Test\\": "tests/"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~9.5"
+  }
+}
