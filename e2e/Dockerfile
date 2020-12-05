@@ -6,6 +6,15 @@ ENV JAVA_HOME=/usr/lib/jvm//java-11-openjdk
 ENV PATH="$JAVA_HOME/bin:/bin:${PATH}"
 RUN javac --version
 
+# PHP
+RUN apk add php
+RUN apk add php7-dom
+RUN apk add php7-xml
+RUN apk add php7-xmlwriter
+RUN apk add php7-tokenizer
+RUN php --version
+RUN apk add composer
+
 # Python
 RUN apk add python2 python3
 RUN python --version
