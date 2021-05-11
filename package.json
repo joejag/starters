@@ -19,30 +19,21 @@
     "/available"
   ],
   "dependencies": {
-    "fs-extra": "^9.0.1",
-    "ink": "^3.0.8",
-    "react": "^17.0.1"
+    "fs-extra": "^9.0.1"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.3",
     "@types/jest": "^26.0.15",
-    "@types/react": "^16.9.56",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
     "babel-eslint": "^10.1.0",
-    "chalk": "^4.1.0",
     "eslint": "^7.13.0",
     "eslint-config-standard": "^16.0.1",
-    "eslint-config-standard-jsx": "^10.0.0",
-    "eslint-config-standard-react": "^11.0.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-standard": "^4.0.2",
-    "ink-testing-library": "^2.1.0",
     "jest": "^26.6.3",
     "np": "^7.0.0",
     "ts-jest": "^26.4.4",

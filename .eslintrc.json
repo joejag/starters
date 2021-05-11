@@ -3,10 +3,5 @@
     "jest": true
   },
   "parser": "babel-eslint",
-  "extends": [
-     "standard",
-     "standard-jsx",
-     "standard-react",
-     "plugin:jest/recommended",
-     "plugin:@typescript-eslint/recommended"]
+  "extends": ["standard", "plugin:@typescript-eslint/recommended"]
 }
