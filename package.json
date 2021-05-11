@@ -18,9 +18,6 @@
     "/dist",
     "/available"
   ],
-  "dependencies": {
-    "fs-extra": "^9.0.1"
-  },
   "devDependencies": {
     "@types/fs-extra": "^9.0.3",
     "@types/jest": "^26.0.15",

@@ -1,9 +1,15 @@
 #!/usr/bin/env node
 
-import fs from 'fs-extra'
 import path from 'path'
 
-import { createStarter, noLanguageSpecified, unknownLanguage } from './ui'
+import {
+  createFailed,
+  createComplete,
+  noLanguageSpecified,
+  unknownLanguage,
+} from './ui'
+import { copyFolderSync, isEmpty } from './fs'
+
 import KNOWN_LANGUAGES from './supported'
 
 const language = process.argv.slice(2)[0]
@@ -15,12 +21,12 @@ if (language === undefined) {
 } else {
   const source = path.resolve(__dirname, '..', 'available', language)
   const cwd = process.cwd()
-  const destination =
-    fs.readdirSync(cwd).length === 0 ? cwd : `${cwd}/${language}_project`
+  const destination = isEmpty(cwd) ? cwd : `${cwd}/${language}_project`
 
-  createStarter({
-    language,
-    source,
-    destination,
-  })
+  try {
+    copyFolderSync(source, destination)
+    createComplete({ language, destination })
+  } catch (err) {
+    createFailed({ destination, err })
+  }
 }
