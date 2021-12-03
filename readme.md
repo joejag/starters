@@ -17,6 +17,7 @@ Currently we support:
 - rust
 - scala
 - ts (typescript)
+- clojure
 
 ## Install
 

@@ -44,6 +44,12 @@ RUN dotnet --version
 RUN apk add rust cargo
 RUN cargo --version
 
+# Clojure
+RUN apk add git
+RUN curl -O https://download.clojure.org/install/linux-install-1.10.3.1040.sh
+RUN chmod +x linux-install-1.10.3.1040.sh
+RUN ./linux-install-1.10.3.1040.sh
+
 # Install our tool
 ADD starters.tgz /app
 WORKDIR /app/package

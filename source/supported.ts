@@ -10,4 +10,5 @@ export default [
   'rust',
   'scala',
   'ts',
+  'clojure'
 ]
