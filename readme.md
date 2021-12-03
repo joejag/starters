@@ -6,6 +6,7 @@ A node package that gives you the start of a new project with unit tests in many
 
 Currently we support:
 
+- clojure
 - cplusplus
 - csharp
 - go
@@ -17,7 +18,6 @@ Currently we support:
 - rust
 - scala
 - ts (typescript)
-- clojure
 
 ## Install
 

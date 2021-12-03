@@ -1,4 +1,5 @@
 export default [
+  'clojure',
   'cplusplus',
   'csharp',
   'go',
@@ -10,5 +11,4 @@ export default [
   'rust',
   'scala',
   'ts',
-  'clojure'
 ]
