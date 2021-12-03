@@ -5,5 +5,5 @@
  '[clojure.test :as t])
 
 (t/deftest adder-test
-  (t/is (= 4 (starter/adder 2 2)))
-  (t/is (= 10 (starter/adder 8 2))))
+  (t/is (= "Hello Alice!" (starter/say-hello "Alice")))
+  (t/is (= "Hello World!" (starter/say-hello))))

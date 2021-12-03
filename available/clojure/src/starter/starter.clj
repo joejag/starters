@@ -1,6 +1,6 @@
 (ns starter.starter)
 
-(defn adder
-  "Adds two numbers (or addable things)"
-  [a b]
-  (+ a b))
+(defn say-hello
+  "Say hello to a person or the world"
+  ([name] (str "Hello " name "!"))
+  ([] "Hello World!"))
