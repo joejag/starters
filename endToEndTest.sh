@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if [[ ! -d node_modules ]]; then
+    npm install
+fi
+
 # Build a docker image with the latest version of the rool
 npm run build
 npm pack

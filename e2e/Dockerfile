@@ -31,18 +31,18 @@ RUN ruby -v
 # bash
 RUN apk add bash
 
-# C#
-RUN apk add icu libintl curl
-ADD https://dot.net/v1/dotnet-install.sh dotnet-install.sh
-RUN chmod +x dotnet-install.sh
-RUN ./dotnet-install.sh
-ENV CSHARP_HOME=/root/.dotnet
-ENV PATH="$CSHARP_HOME:${PATH}"
-RUN dotnet --version
-
 # Rust
 RUN apk add rust cargo
 RUN cargo --version
+
+# C# 6.0
+RUN apk add icu libintl curl
+ADD https://download.visualstudio.microsoft.com/download/pr/bb523fba-7eb0-49ff-8214-c78c65dae090/7e7f9798ee57bf93649ada3eb13a79ae/dotnet-sdk-6.0.100-linux-musl-x64.tar.gz dotnet.tar.gz
+ENV DOTNET_FILE=dotnet.tar.gz
+ENV DOTNET_ROOT="/root/.dotnet"
+RUN mkdir -p "$DOTNET_ROOT" && tar zxf "$DOTNET_FILE" -C "$DOTNET_ROOT"
+ENV PATH=$PATH:$DOTNET_ROOT
+RUN dotnet --version
 
 # Clojure
 RUN apk add git
