@@ -1,4 +1,5 @@
 export default [
+  'clojure',
   'cplusplus',
   'csharp',
   'go',
