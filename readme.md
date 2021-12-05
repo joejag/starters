@@ -12,7 +12,7 @@ Currently we support:
 - go
 - java
 - kotlin
-- node
+- node (javascript)
 - php
 - python
 - ruby
