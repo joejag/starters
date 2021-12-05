@@ -11,6 +11,7 @@ Currently we support:
 - csharp
 - go
 - java
+- kotlin
 - node
 - php
 - python
@@ -76,10 +77,10 @@ We'd appreciate any new language that you can provide. To do this:
   - Assume the standard tools are already installed for the language
   - The programme shouldn't watch, it should run and exist cleanly
   - The user shouldn't have to do anything else to make the script pass
-- Add the language in `supported.tsx`
+- Add the language in `source/supported.ts`
 
 And to test it...
 
 - Add the language to `supported` in `endToEndTest.sh`
-- Add any required tooling to the `Dockerfile`. The tests run inside this Docker container
+- Add any required tooling to the `e2e/Dockerfile`. The tests run inside this Docker container
 - Run the `endToEndTest.sh` and make sure it finishes
