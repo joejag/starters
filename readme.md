@@ -7,18 +7,18 @@ A node package that gives you the start of a new project with unit tests in many
 Currently we support:
 
 - clojure
-- cplusplus
+- cplusplus (c++)
 - csharp
 - go
 - java
 - kotlin
-- node (javascript)
+- javascript (node / js)
 - php
 - python
 - ruby
 - rust
 - scala
-- ts (typescript)
+- typescript (ts)
 
 ## Install
 

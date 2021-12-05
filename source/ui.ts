@@ -1,4 +1,4 @@
-import KNOWN_LANGUAGES from './supported'
+import KNOWN_LANGUAGES, { ALIAS } from './supported'
 
 // Font colour options: https://stackoverflow.com/questions/9781218/how-to-change-node-jss-console-font-color
 
@@ -11,7 +11,11 @@ export const noLanguageSpecified = (): void => {
   console.log('')
   console.log('You can choose from:')
   KNOWN_LANGUAGES.forEach((l) => {
-    console.log(` * ${l}`)
+    if (l in ALIAS) {
+      console.log(` * ${[l].concat(ALIAS[l]).join(' / ')}`)
+    } else {
+      console.log(` * ${l}`)
+    }
   })
 }
 

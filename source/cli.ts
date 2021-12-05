@@ -10,23 +10,35 @@ import {
 } from './ui'
 import { copyFolderSync, isEmpty } from './fs'
 
-import KNOWN_LANGUAGES from './supported'
+import KNOWN_LANGUAGES, { ALIAS } from './supported'
 
-const language = process.argv.slice(2)[0]
+let language = process.argv.slice(2)[0]
 
 if (language === undefined) {
   noLanguageSpecified()
-} else if (KNOWN_LANGUAGES.indexOf(language) === -1) {
-  unknownLanguage({ language })
-} else {
-  const source = path.resolve(__dirname, '..', 'available', language)
-  const cwd = process.cwd()
-  const destination = isEmpty(cwd) ? cwd : `${cwd}/${language}_project`
+  process.exit(1)
+}
 
-  try {
-    copyFolderSync(source, destination)
-    createComplete({ language, destination })
-  } catch (err) {
-    createFailed({ destination, err })
+// check for alias
+Object.keys(ALIAS).forEach((alias: string) => {
+  const aka = ALIAS[alias]
+  if (aka.indexOf(language) !== -1) {
+    language = alias
   }
+})
+
+if (KNOWN_LANGUAGES.indexOf(language) === -1) {
+  unknownLanguage({ language })
+  process.exit(2)
+}
+
+const source = path.resolve(__dirname, '..', 'available', language)
+const cwd = process.cwd()
+const destination = isEmpty(cwd) ? cwd : `${cwd}/${language}_project`
+
+try {
+  copyFolderSync(source, destination)
+  createComplete({ language, destination })
+} catch (err) {
+  createFailed({ destination, err })
 }

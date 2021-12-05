@@ -13,3 +13,9 @@ export default [
   'scala',
   'ts',
 ]
+
+export const ALIAS = {
+  cplusplus: ['c++'],
+  node: ['js', 'javascript'],
+  ts: ['typescript'],
+}

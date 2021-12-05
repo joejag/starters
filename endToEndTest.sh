@@ -13,7 +13,7 @@ cd e2e
 docker build --tag starters .
 
 # Run every supported project and make sure the tests pass
-declare -a supported=( "clojure" "cplusplus" "csharp" "go" "java" "kotlin" "node" "php" "python" "ruby" "rust" "scala" "ts")
+declare -a supported=( "clojure" "c++" "csharp" "go" "java" "kotlin" "node" "php" "python" "ruby" "rust" "scala" "ts")
 for i in "${supported[@]}"
 do
    echo "Checking $i"
