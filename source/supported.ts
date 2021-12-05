@@ -4,6 +4,7 @@ export default [
   'csharp',
   'go',
   'java',
+  'kotlin',
   'node',
   'php',
   'python',
